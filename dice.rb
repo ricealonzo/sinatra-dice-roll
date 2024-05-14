@@ -92,7 +92,7 @@ get("/dice/3/12")do
   
   @third_die = rand(3..12)
   
-  @sum = first_die + second_die + third_die
+  @sum = @first_die + @second_die + @third_die
 
   erb(:three_twelve)
  
