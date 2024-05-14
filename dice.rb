@@ -29,7 +29,7 @@ get("/dice/2/6")do
   } and your second die rolled #{second_die
   } your total is #{sum}"
 
-  erb(:two_six)
+  erb(:two_six, {:layout => :wrapper})
 end
 
 
@@ -45,7 +45,7 @@ get("/dice/2/10")do
   } and your second die rolled #{second_die
   } your total is #{sum}"
   
-  erb(:two_ten)
+  erb(:two_ten, {:layout => :wrapper})
 
 end
 
@@ -55,7 +55,7 @@ get("/dice/1/20")do
   
   @first_die = rand(1..20)
 
-  erb(:one_twenty)
+  erb(:one_twenty, {:layout => :wrapper})
 
 end
 
@@ -79,7 +79,7 @@ get("/dice/5/4")do
   } your second die rolled #{second_die
   } third die rolled #{third_die} your fourth die rolled #{fourth_die} your fifth die rolled #{fifth_die}your total is #{sum}"
 
-  erb(:five_four)
+  erb(:five_four, {:layout => :wrapper})
 
 end
 
@@ -94,6 +94,6 @@ get("/dice/3/12")do
   
   @sum = @first_die + @second_die + @third_die
 
-  erb(:three_twelve)
+  erb(:three_twelve, {:layout => :wrapper})
  
 end
