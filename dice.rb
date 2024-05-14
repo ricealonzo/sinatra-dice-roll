@@ -75,9 +75,9 @@ get("/dice/5/4")do
   sum = first_die + second_die + third_die + fourth_die
   + fifth_die
   
-  outcome = "Your first die rolled #{first_die
+  @outcome = "Your first die rolled #{first_die
   } your second die rolled #{second_die
-  } third die rolled #{third_die} your fourth die rolled#{fourth_die} your fifth die rolled #{fifth_die}your total is #{sum}"
+  } third die rolled #{third_die} your fourth die rolled #{fourth_die} your fifth die rolled #{fifth_die}your total is #{sum}"
 
   erb(:five_four)
 
@@ -86,13 +86,13 @@ end
 
 get("/dice/3/12")do
   
-  first_die = rand(3..12)
+  @first_die = rand(3..12)
   
-  second_die = rand(3..12)
+  @second_die = rand(3..12)
   
-  third_die = rand(3..12)
+  @third_die = rand(3..12)
   
-  sum = first_die + second_die + third_die
+  @sum = first_die + second_die + third_die
 
   erb(:three_twelve)
  
