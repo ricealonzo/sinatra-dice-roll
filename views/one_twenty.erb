@@ -1,5 +1,13 @@
 
 <h1>1 die 20 Sides <h1>
-<h3>You Have Rolled <%= @first_die %>! </h3><br>
+
+<% if @first_die == 1%>
+  <h2 style="color: red"> You Have Rolled <%= @first_die %></h2>
+<% elsif @first_die == 20 %>
+  <h2 style="color: green"> You Have Rolled <%= @first_die %></h2>
+<%else%>
+  <h3>You Have Rolled <%= @first_die %>! </h3><br>
+<%end%>
+
 <a href='/dice/1/20'>Roll Again</a>
 <a href='/'>Home Page</a>
